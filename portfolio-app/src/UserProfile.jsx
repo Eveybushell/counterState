@@ -26,28 +26,27 @@ export default function UserProfile () {
         <div>
             <p>
             {user.name}'s email is {user.email}.
-            Their address is
-            {user.address.city},
-            {user.address.country}
-            {user.address.street}.
+            Their address is {user.address.city}, {user.address.country} {user.address.street}.
             </p>
 
+            <p>Street:</p>
             <input
                 value = {street}
                 onChange={(e) => setStreet(e.target.value)}
             />
-
+            <p>City:</p>
             <input
                 value = {city}
                 onChange={(e) => setCity(e.target.value)}
             />
 
+            <p>Country:</p>
             <input
                 value = {country}
                 onChange={(e) => setCountry(e.target.value)}
             />
 
-
+            <p>Submit</p>
             <button onClick= {() => updateAddress(street, city, country)}>Change address</button>
         </div>
     );
